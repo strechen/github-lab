@@ -1,3 +1,10 @@
+resource "github_repository" "tf_github_lab_devops_repository" {
+  name        = "tf-lab-devops"
+  description = "${data.terraform_remote_state.base_config.outputs.organization_name}, repository for DevOps team"
+  visibility  = "private"
+  auto_init   = "true"
+}
+
 resource "github_repository" "nodejs_base_repo" {
   name                   = "tf-lab-app"
   description            = "TF GitHub lab repository for nodejs app"
