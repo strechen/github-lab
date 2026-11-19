@@ -1,6 +1,7 @@
 resource "github_organization_settings" "github_org" {
   billing_email                                            = "fusybear@gmail.com"
   company                                                  = local.org_name
+  name                                                     = local.org_name
   description                                              = "${local.org_name} organization for GitHub terraform lab"
   default_repository_permission                            = "read"
   members_can_create_repositories                          = "false"

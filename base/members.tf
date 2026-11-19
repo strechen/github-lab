@@ -10,6 +10,7 @@ resource "github_team" "nodejs_team" {
   privacy     = "secret"
 }
 
+
 resource "github_team_members" "devops_team_member" {
   team_slug = github_team.devops_team.slug
   members {
